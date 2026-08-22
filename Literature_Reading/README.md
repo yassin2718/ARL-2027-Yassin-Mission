@@ -1,7 +1,7 @@
 # Literature Reading Mission
 You are required to read, digest and understand the paper provided, then submit a presentation that can be covered in 5-7 mins.
 You will present this presentation in the interview, where it will be discussed further.
-Provided below are the bare minimum guidelines to help you get an idea of what we atleast expect.
+Provided below are the bare minimum guidelines to help you get an idea of what we at least expect.
 
 You don't necessarily have to explain all points within the 7 minute presentation, but the further discussion may cover all points and beyond.
 
@@ -12,14 +12,14 @@ You don't necessarily have to explain all points within the 7 minute presentatio
 the candidate should at least understand the following:
 - the basic LiDAR perception pipeline
 - understand how distortions can be caused in a single lidar point cloud frame due to vehicle movement if not accounted for (VERY IMPORTANT)
-- how the cone colour can be estimated from light intensity in point cloud
+- how the cone color can be estimated from light intensity in point cloud
 - why cluster reconstruction is necessary
 
 ### Perception Camera
 the candidate should at least understand the following:
 - the basic camera perception pipeline
 - key differences between the monocular and stereo pipelines
-- how the system obtains 3D cone positions from camera data (The idea of CNNs and keypoints)
+- how the system obtains 3D cone positions from camera data (The idea of CNNs and key points)
 - how matching happens between the 2 frames in stereo 
 
 ### Perception Module as a Whole
@@ -38,7 +38,7 @@ the candidate should at least understand the following:
 the candidate should at least understand the following:
 - why SLAM is necessary when the track is initially unknown/ what SLAM is trying to solve in general
 - the idea that this is a data association problem of trying to correspond observed to mapped
-- the basic idea behind FastSLAM 2.0 
+- the basic idea behind Fast SLAM 2.0 
 - idea of lap closure + what occurs after it 
 
 ### Planning
@@ -64,4 +64,4 @@ A `.pptx` or `.pdf` of your presentation. Feel free to add any additional docume
 Again, you may be asked and evaluated on ideas in the paper that aren't included in the guidelines, as these guidelines are the bare minimum.
 
 ## AI Usage
-No causes for immediate disqualifciation here, just make sure to note down how you used it.
+No causes for immediate disqualification here, just make sure to note down how you used it.

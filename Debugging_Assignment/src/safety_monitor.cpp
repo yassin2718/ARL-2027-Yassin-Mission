@@ -19,11 +19,11 @@ std::vector<Obstacle> processDetections(
     const SafetyConfig& config) {
     std::vector<Obstacle> obstacles;
     const double pi = std::acos(-1.0); // declaring pi
-    const double headingRadians = pose.headingDegrees * (pi / 180.0); // Convert degrees to radians
+    const double headingRadians = pose.headingDegrees * (pi / 180.0); // convert to radians
     const double cosine = std::cos(headingRadians);
     const double sine = std::sin(headingRadians);
 
-    for (std::size_t index = 0; index < detections.size(); ++index) { //corrected index
+    for (std::size_t index = 0; index < detections.size(); ++index) { // corrected index
         const auto& detection = detections[index];
         const double range = std::hypot(detection.forward, detection.left);
         const bool validConfidence = detection.confidence >= config.minimumConfidence
@@ -54,7 +54,7 @@ std::optional<Obstacle> findNearestObstacle(const std::vector<Obstacle>& obstacl
 
     const Obstacle* nearest = &obstacles.front();
     for (const auto& obstacle : obstacles) {
-        if (obstacle.range < nearest->range) { // Corrected comparison operator
+        if (obstacle.range < nearest->range) { // corrected comparison operator
             nearest = &obstacle;
         }
     }
@@ -63,7 +63,7 @@ std::optional<Obstacle> findNearestObstacle(const std::vector<Obstacle>& obstacl
 }
 
 double calculateStoppingDistance(double speedKph, const SafetyConfig& config) {
-    const double speedMps = speedKph * (5.0/18.0);  // Convertion from km/h to m/s
+    const double speedMps = speedKph * (5.0/18.0);  // unit convertion
     const double reactionDistance = speedMps * config.reactionTimeSeconds;
     const double brakingDistance = speedMps * speedMps
         / (2.0 * config.maximumDecelerationMps2);
